@@ -54,4 +54,53 @@ return (0);
 */
 /*-----------------------------------------------------------*/
 
+/* ft_isascii */
 
+/*
+int	ft_isascii(int c);
+int	main(void)
+{
+char test1 = '0';
+         int test2 = -3;
+         char test3 = 'l';
+ printf("testing %c : %d \n", test1, ft_isascii(test1));
+printf("testing %d : %d \n", test2, ft_isascii(test2));
+printf("testing %c : %d \n", test3, ft_isascii(test3));
+
+return(0);
+}
+*/
+/*-------------------------------------------------------------*/
+
+/* ft_isprint */
+/*
+int	ft_isprint(int c);
+int	 main(void)
+{
+	char test1 = '0';
+         int test2 = '\n';
+         char test3 = 'l';
+ printf("testing %c : %d \n", test1, ft_isprint(test1));
+printf("testing %d : %d \n", test2, ft_isprint(test2));
+printf("testing %c : %d \n", test3, ft_isprint(test3));
+
+return(0);
+}
+*/
+/*----------------------------------------------------------------*/
+
+/* ft_memset */
+/*
+void *ft_memset(void *b, int c, size_t len);
+int main(void)
+
+    char str_test[] = "Hello World!";
+    printf("Before ft_memset: %s\n", str_test);
+
+    ft_memset(str, 'X', 5);
+    printf("After ft_memset:  %s\n", str);
+
+    return (0);
+}
+*/
+/*---------------------------------------------------------------*/
