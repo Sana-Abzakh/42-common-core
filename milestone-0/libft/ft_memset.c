@@ -10,18 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-# include "libft.h"
+#include "libft.h"
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char *temp;
+	unsigned char	*temp;
 
 	temp = (unsigned char *)b;
-	while(len > 0)
+	while (len > 0)
 	{
-		*(temp++) = (unsigned char) c;
+		*(temp++) = (unsigned char)c;
 		len--;
 	}
 	return (b);
 }
-
