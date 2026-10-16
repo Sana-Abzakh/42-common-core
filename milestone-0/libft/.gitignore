@@ -1,5 +1,4 @@
 *.a
 *.o
-a.out.vscode/
 a.out
 .vscode/
