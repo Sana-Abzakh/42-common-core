@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/17 18:09:02 by sabzakh           #+#    #+#             */
+/*   Updated: 2026/10/17 18:09:10 by sabzakh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static size_t	ft_count_words(char const *s, char c)
@@ -19,37 +31,37 @@ static size_t	ft_count_words(char const *s, char c)
 	return (count);
 }
 
-
-char    **ft_split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
-    char    **result;
-    size_t  i;
-    size_t  j;
-    size_t  start;
+	char	**result;
+	size_t	i;
+	size_t	j;
+	size_t	start;
 
-    if (!s)
-        return (NULL);
-    result = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
-    if (!result)
-        return (NULL);
-    i = 0;
-    j = 0;
-    while (s[i])
-    {
-        while (s[i] && s[i] == c)
-            i++;
-        start = i;
-        while (s[i] && s[i] != c)
-            i++;
-        if (i > start)
-            result[j++] = ft_substr(s, start, i - start);
-    }
-    result[j] = NULL;
-    return (result);
+	if (!s)
+		return (NULL);
+	result = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i])
+	{
+		while (s[i] && s[i] == c)
+			i++;
+		start = i;
+		while (s[i] && s[i] != c)
+			i++;
+		if (i > start)
+			result[j++] = ft_substr(s, start, i - start);
+	}
+	result[j] = NULL;
+	return (result);
 }
 /*
 #include <stdio.h>
-int main(void)
+
+int	main(void)
 {
     char    *s;
     char    c;

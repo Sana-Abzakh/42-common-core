@@ -2,8 +2,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char    **ft_split(const char *s, char c);
-int main(void)
+/*ft_split*/
+/*
+char	**ft_split(const char *s, char c);
+int	main(void)
 {
     char    *s;
     char    c;
@@ -26,3 +28,6 @@ int main(void)
     }
     return (0);
 }
+    */
+
+/* ft_itoa.c*/

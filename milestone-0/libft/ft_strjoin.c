@@ -6,11 +6,12 @@
 /*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 21:57:31 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/16 21:57:36 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/17 18:10:47 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_strjoin(const char *s1, const char *s2)
 {
 	char	*new_str;
