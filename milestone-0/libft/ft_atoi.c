@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:38:03 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/12 15:54:29 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 16:00:51 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,9 @@ int	ft_atoi(const char *str)
 
 int	main(void)
 {
-	char	str[] = "2147483647";
+	char	*str;
 
+	str = "2147483647";
 	printf("result : %d\n", ft_atoi(str));
-}*/
+}
+*/

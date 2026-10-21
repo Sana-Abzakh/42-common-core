@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 20:18:57 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/16 20:18:59 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 15:12:09 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,3 +26,18 @@ char	*ft_strdup(const char *src)
 	new_s[i] = '\0';
 	return (new_s);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char *test_str;
+	char *result;
+
+	test_str = "hello";
+	result = ft_strdup(test_str);
+	printf("Original string: %s\n", test_str);
+	printf("Duplicated string: %s\n", result);
+	free(result);
+	return (0);
+}*/

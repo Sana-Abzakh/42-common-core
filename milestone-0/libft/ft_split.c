@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 18:09:02 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/17 18:09:10 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 15:07:35 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,24 +63,25 @@ char	**ft_split(const char *s, char c)
 
 int	main(void)
 {
-    char    *s;
-    char    c;
-    char    **result;
-    size_t  i;
+	char	*s;
+	char	c;
+	char	**result;
+	size_t	i;
 
-    s = "Hello,World!This,is,a,test.";
-    c = ',';
-    result = ft_split(s, c);
-    if (result)
-    {
-        i = 0;
-        while (result[i])
-        {
-            printf("Word %zu: '%s'\n", i, result[i]);
-            free(result[i]);
-            i++;
-        }
-        free(result);
-    }
-    return (0);
-}*/
+	s = "Hello,World!This,is,a,test.";
+	c = ',';
+	result = ft_split(s, c);
+	if (result)
+	{
+		i = 0;
+		while (result[i])
+		{
+			printf("Word %zu: '%s'\n", i, result[i]);
+			free(result[i]);
+			i++;
+		}
+		free(result);
+	}
+	return (0);
+}
+*/

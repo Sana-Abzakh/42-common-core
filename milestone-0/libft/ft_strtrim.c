@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 18:07:28 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/17 18:07:31 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 15:50:35 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,14 +41,13 @@ int	main(void)
 	char	*set;
 	char	*result;
 
-    s1 = "   Hellooo,World!   ";
-    set = "oo";
-    result = ft_strtrim(s1, set);
-    if (result)
-     {
-    printf("Trimmed string: '%s'\n", result);
-        free(result);
-    }
-    return (0);
-}
-  */
+	s1 = "Hellooo,World!  ";
+	set = " ";
+	result = ft_strtrim(s1, set);
+	if (result)
+	{
+		printf("Trimmed string: '%s'\n", result);
+		free(result);
+	}
+	return (0);
+}*/

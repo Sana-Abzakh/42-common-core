@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 19:09:08 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/17 19:09:12 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 15:29:23 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,27 +35,25 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 #include <stdio.h>
 #include <stdlib.h>
 
-
 char	cap_char(unsigned int i, char c)
 {
-    (void)i;
-    if (c >= 'a' && c <= 'z')
-    {
-        return (c - 32);
-    }
-    return (c);
+	(void)i;
+	if (c >= 'a' && c <= 'z')
+	{
+		return (c - 32);
+	}
+	return (c);
 }
 
 int	main(void)
 {
 	char const	*input;
-    char *result;
+	char		*result;
 
-    
-    input = "abcde";
-    result = ft_strmapi(input, cap_char);
-    printf("Result:%s\n", result);
-    free(result);
-    return (0);
+	input = "abcde";
+	result = ft_strmapi(input, cap_char);
+	printf("Result:%s\n", result);
+	free(result);
+	return (0);
 }
 */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 13:43:27 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/18 14:00:09 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 15:02:30 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,11 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 }
 /*
-int main ()
+int	main(void)
 {
 	int	fd;
 
-	fd = open ("sana.txt",O_RDWR);
+	fd = open("test.txt", O_RDWR);
 	ft_putchar_fd('c', fd);
-	close (fd);
-	
-}
-*/
+	close(fd);
+}*/

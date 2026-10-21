@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 18:06:36 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/17 18:06:39 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 14:30:05 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,11 +64,12 @@ char	*ft_itoa(int n)
 
 int	main(void)
 {
-    int n = -12345;
-    char *str = ft_itoa(n);
-    
-        printf("Integer: %d, String: %s\n", n, str);
-        free(str);
-        return(0);
+	int		n;
+	char	*str;
 
+	n = -12345;
+	str = ft_itoa(n);
+	printf("Integer: %d, String: %s\n", n, str);
+	free(str);
+	return (0);
 }*/

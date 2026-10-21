@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 20:53:37 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/17 20:53:40 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 15:55:04 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,3 +23,20 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 		i++;
 	}
 }
+/*
+#include <stdio.h>
+
+static void	inc(unsigned int i, char *c)
+{
+	(void)i;
+	(*c)++;
+}
+
+int	main(void)
+{
+	char str[] = "Hello, World!";
+
+	ft_striteri(str, inc);
+	printf("Modified string: %s\n", str);
+	return (0);
+}*/

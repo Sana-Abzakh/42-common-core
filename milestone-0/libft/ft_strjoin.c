@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 21:57:31 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/17 18:10:47 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 15:15:51 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,14 +38,14 @@ int	main(void)
 	char	*s2;
 	char	*result;
 
-    s1 = "42 amman ";
-    s2 = "welcome";
-    result = ft_strjoin(s1, s2);
-    if (result)
-    {
-        printf("%s\n", result);
-        free(result);
-    }
-    return (0);
+	s1 = "42 amman, ";
+	s2 = "welcome";
+	result = ft_strjoin(s1, s2);
+	if (result)
+	{
+		printf("%s\n", result);
+		free(result);
+	}
+	return (0);
 }
 */

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 20:35:38 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/11 20:35:50 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 15:28:10 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,3 +21,13 @@ size_t	ft_strlen(const char *s)
 		i++;
 	return (i);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char *str;
+
+	str = "hello!";
+	printf("string length is : %ld\n", ft_strlen(str));
+}*/

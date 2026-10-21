@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 15:28:07 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/09 15:48:31 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 14:09:00 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
@@ -23,3 +24,13 @@ void	ft_bzero(void *s, size_t n)
 		n--;
 	}
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+
+{
+	char test_str[] = "hello";
+	ft_bzero(test_str + 1, 3);
+	printf(" hello becomes :%s \n", test_str);
+}*/

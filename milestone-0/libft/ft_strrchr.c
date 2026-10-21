@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 17:33:39 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/12 13:02:49 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 15:39:57 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,3 +31,13 @@ char	*ft_strrchr(const char *s, int c)
 		v = ((char *)&s[i]);
 	return (v);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	const char *str = "Hello world";
+
+	printf("Found at index:%ld\n", ft_strrchr(str, 'o') - str);
+	return (0);
+}*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 16:51:45 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/09 17:24:58 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 14:40:39 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,17 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	}
 	return (dst);
 }
+/*
+#include <stdio.h>
+
+int	main(void)
+{
+	char *dst;
+	const char *src;
+
+	src = "hello";
+	dst = malloc(6);
+	ft_memcpy(dst, src, 2);
+	printf("result : %s\n", dst);
+	free(dst);
+}*/

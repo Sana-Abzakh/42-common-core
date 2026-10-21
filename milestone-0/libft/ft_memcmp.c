@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 18:33:08 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/11 19:38:42 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 14:34:45 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,10 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 
 int	main(void)
 {
-	char	s1[] = "hello";
-	char	s2[] = "hey";
-	
+	char	*s1;
+	char	*s2;
+
+	s1 = "hello";
+	s2 = "hey";
 	printf("result : %d\n", ft_memcmp(s1, s2, 3));
 }*/

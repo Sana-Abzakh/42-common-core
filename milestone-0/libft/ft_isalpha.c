@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 19:51:52 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/05 21:01:54 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 14:19:58 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,3 +18,24 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
+/*
+#include <stdio.h>
+
+int	ft_isalpha(int c);
+int	main(void)
+{
+	char test1;
+	char test2;
+	char test3;
+	char test4;
+
+	test1 = 'a';
+	test2 = 'Z';
+	test3 = '5';
+	test4 = '!';
+	printf("Testing '%c': %d \n", test1, ft_isalpha(test1));
+	printf("Testing '%c': %d \n", test1, ft_isalpha(test2));
+	printf("Testing '%c': %d \n", test1, ft_isalpha(test3));
+	printf("Testing '%c': %d \n", test1, ft_isalpha(test4));
+	return (0);
+}*/

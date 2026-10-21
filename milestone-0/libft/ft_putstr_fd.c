@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42.fr>            +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 16:16:23 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/18 16:52:24 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 15:04:55 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	main(void)
 {
 	int	fd;
 
-	fd = open("sana.txt", O_RDWR);
+	fd = open("test.txt", O_RDWR);
 	ft_putstr_fd("Hello 42!", fd);
 	close(fd);
 }

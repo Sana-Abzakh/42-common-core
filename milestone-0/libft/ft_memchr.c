@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <sabzakh@student.42amman.com>      +#+  +:+       +#+        */
+/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 19:39:49 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/11 20:34:50 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/21 14:32:47 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	main(void)
 	char		*found;
 
 	str = "hello 42";
-	found = (char *)ft_memchr(str, '1', strlen(str));
+	found = (char *)ft_memchr(str, 'h', strlen(str));
 	if (found)
 		printf("found at index : %ld\n", found - str);
 	else
