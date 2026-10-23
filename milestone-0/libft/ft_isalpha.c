@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 19:51:52 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/21 14:19:58 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/23 13:13:29 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,11 +31,11 @@ int	main(void)
 
 	test1 = 'a';
 	test2 = 'Z';
-	test3 = '5';
-	test4 = '!';
+	test3 = '\0';
+	test4 = '@';
 	printf("Testing '%c': %d \n", test1, ft_isalpha(test1));
-	printf("Testing '%c': %d \n", test1, ft_isalpha(test2));
-	printf("Testing '%c': %d \n", test1, ft_isalpha(test3));
-	printf("Testing '%c': %d \n", test1, ft_isalpha(test4));
+	printf("Testing '%c': %d \n", test2, ft_isalpha(test2));
+	printf("Testing '%c': %d \n", test3, ft_isalpha(test3));
+	printf("Testing '%c': %d \n", test4, ft_isalpha(test4));
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 20:35:38 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/21 15:28:10 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/23 16:25:49 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int	main(void)
 {
 	char *str;
 
-	str = "hello!";
-	printf("string length is : %ld\n", ft_strlen(str));
+	str = "abc\0drfj";
+	printf("string length is : %zu\n", ft_strlen(str));
 }*/

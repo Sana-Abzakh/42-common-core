@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 15:28:07 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/21 14:09:00 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/23 16:56:19 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ int	main(void)
 
 {
 	char test_str[] = "hello";
-	ft_bzero(test_str + 1, 3);
+	ft_bzero(test_str + 2, 3);
 	printf(" hello becomes :%s \n", test_str);
 }*/

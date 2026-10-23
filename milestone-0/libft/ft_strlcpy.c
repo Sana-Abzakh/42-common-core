@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 15:33:50 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/21 15:25:43 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/23 19:53:04 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@ int	main(void)
 	char dst[20] = "Hello, ";
 	const char *src = "World!";
 
-	size_t result = ft_strlcpy(dst, src, sizeof(dst));
-	printf("Result: %ld\n", result);
+	size_t result = ft_strlcpy(dst, src, 20);
+
+	printf("Result: %zu, dst: \"%s\"\n", result, dst);
 	return (0);
 }*/
