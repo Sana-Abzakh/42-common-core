@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 16:08:03 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/21 15:31:25 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/24 14:26:54 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ int	main(void)
 	char	*str1;
 	char	*str2;
 
-	str1 = "hello";
-	str2 = "hey";
-	printf("result: %d\n", ft_strncmp(str1, str2, 3));
+	str1 = "he";
+	str2 = "he";
+	printf("result: %d\n", ft_strncmp(str1, str2, 5));
 }*/

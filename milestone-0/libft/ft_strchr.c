@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/09 19:42:58 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/21 15:09:13 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/24 13:55:13 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned int	i;
-	char			cc;
+	size_t	i;
+	char	cc;
 
 	cc = (char)c;
 	i = 0;
@@ -35,7 +35,12 @@ char	*ft_strchr(const char *s, int c)
 int	main(void)
 {
 	const char *str = "Hello world";
+	char *res;
 
-	printf("Found at index:%ld\n", ft_strchr(str, 'l') - str);
+	res = ft_strchr(str, 's');
+	if (res == NULL)
+		printf("Not found\n");
+	else
+		printf("Found at index: %td\n", res - str);
 	return (0);
 }*/

@@ -1,14 +1,32 @@
 #include "libft.h"
 
-char	*strchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int c)
 {
-	int i;
+	char	cc;
+	size_t	len;
 
-	i = 0;
-	while (s[i] == c)
+	cc = (char)c;
+	len = ft_strlen(s) + 1;
+	while (len > 0)
 	{
-		return (i);
-		i++;
+		len--;
+		if (s[len] == cc)
+			return ((char *)&s[len]);
 	}
 	return (NULL);
+}
+
+#include <stdio.h>
+
+int	main(void)
+{
+	const char *str = "Hello world";
+	char *res;
+
+	res = ft_strrchr(str, 'l');
+	if (res == NULL)
+		printf("Not found\n");
+	else
+		printf("Found at index: %td\n", res - str);
+	return (0);
 }
