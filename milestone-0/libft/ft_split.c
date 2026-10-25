@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 18:09:02 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/21 15:07:35 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/25 10:41:58 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ static size_t	ft_count_words(char const *s, char c)
 {
 	size_t	count;
 
-	if (!*s)
-		return (0);
 	count = 0;
 	while (*s)
 	{
@@ -31,18 +29,22 @@ static size_t	ft_count_words(char const *s, char c)
 	return (count);
 }
 
-char	**ft_split(const char *s, char c)
+static void	ft_free_all(char **arr, size_t n)
 {
-	char	**result;
+	while (n > 0)
+	{
+		n--;
+		free(arr[n]);
+	}
+	free(arr);
+}
+
+static int	ft_fill(char **result, const char *s, char c)
+{
 	size_t	i;
 	size_t	j;
 	size_t	start;
 
-	if (!s)
-		return (NULL);
-	result = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
-	if (!result)
-		return (NULL);
 	i = 0;
 	j = 0;
 	while (s[i])
@@ -53,11 +55,33 @@ char	**ft_split(const char *s, char c)
 		while (s[i] && s[i] != c)
 			i++;
 		if (i > start)
-			result[j++] = ft_substr(s, start, i - start);
+		{
+			result[j] = ft_substr(s, start, i - start);
+			if (!result[j++])
+			{
+				ft_free_all(result, j - 1);
+				return (0);
+			}
+		}
 	}
 	result[j] = NULL;
+	return (1);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	if (!ft_fill(result, s, c))
+		return (NULL);
 	return (result);
 }
+
 /*
 #include <stdio.h>
 
