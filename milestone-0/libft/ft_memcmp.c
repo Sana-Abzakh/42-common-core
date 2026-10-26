@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 18:33:08 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/24 14:42:36 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 16:38:15 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,14 +30,21 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	return (0);
 }
 /*
+#include "libft.h"
 #include <stdio.h>
 
 int	main(void)
 {
-	char	*s1;
-	char	*s2;
+	const char	*s1;
+	const char	*s2;
 
 	s1 = "hello";
 	s2 = "hey";
-	printf("result : %d\n", ft_memcmp(s1, s2, 3));
-}*/
+	printf("differ    : %d\n", ft_memcmp(s1, s2, 3));   
+	printf("equal     : %d\n", ft_memcmp("abc", "abc", 3));  
+	printf("n == 0    : %d\n", ft_memcmp("abc", "xyz", 0));  
+	printf("binary NUL: %d\n", ft_memcmp("ab\0cd", "ab\0xy", 5)); 
+	printf("unsigned  : %d\n", ft_memcmp("\xff", "\x01", 1));     
+	return (0);
+}
+*/

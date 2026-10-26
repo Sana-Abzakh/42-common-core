@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 20:18:57 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/24 19:01:48 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/25 18:58:41 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_strdup(const char *src)
 	new_s = malloc(ft_strlen(src) + 1);
 	if (!new_s)
 		return (NULL);
-	while (*src)
+	while (src[i])
 	{
-		new_s[i] = *src[i];
+		new_s[i] = src[i];
 		i++;
 	}
 	new_s[i] = '\0';

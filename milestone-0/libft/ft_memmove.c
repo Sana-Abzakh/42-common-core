@@ -1,47 +1,37 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/10/09 17:44:08 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/23 17:35:37 by sana             ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t len)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned char	*dest;
-	unsigned char	*source;
+	size_t				i;
+	unsigned char		*d;
+	const unsigned char	*s;
 
-	if (!dst && !src)
-		return (NULL);
-	dest = (unsigned char *)dst;
-	source = (const unsigned char *)src;
-	if (dest < source)
+	d = (unsigned char *)dest;
+	s = (const unsigned char *)src;
+	if (n == 0)
+		return (d);
+	i = n - 1;
+	if (d > s)
 	{
-		while (len--)
-			*dest++ = *source++;
+		while (i > 0)
+		{
+			d[i] = s[i];
+			i--;
+		}
+		d[i] = s[i];
 	}
 	else
-	{
-		dest = dest + len;
-		source = source + len;
-		while (len--)
-			*--dest = *--source;
-	}
-	return (dst);
+		ft_memcpy(d, s, n);
+	return (d);
 }
 /*
 #include <stdio.h>
 
 int	main(void)
 {
-	char test_src[] = "hi";
-	char test_dst[] = "hey";
-	ft_memmove(test_dst, test_src, 2);
-	printf("result : %s \n", test_dst);
+	char arr[16] = "0123456789";
+
+	ft_memmove(arr + 3, arr, 5);
+
+	printf("memmove OVERLAP (dst > src): \"%s\"\n", arr);
 }*/

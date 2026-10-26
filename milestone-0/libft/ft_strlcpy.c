@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 15:33:50 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/23 19:53:04 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 17:09:50 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t dsize)
 	dest[i] = '\0';
 	return (slen);
 }
-/*
-#include <stdio.h>
+
+/*#include <stdio.h>
 
 int	main(void)
 {
@@ -41,6 +41,6 @@ int	main(void)
 
 	size_t result = ft_strlcpy(dst, src, 20);
 
-	printf("Result: %zu, dst: \"%s\"\n", result, dst);
+	printf("Result: %zu, dst: %s\n", result, dst);
 	return (0);
 }*/

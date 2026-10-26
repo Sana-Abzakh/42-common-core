@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/04 20:40:18 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/23 22:29:32 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 17:07:40 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,30 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	dlen;
 	size_t	i;
+	size_t	dl;
+	size_t	sl;
 
-	dlen = 0;
-	while (dst[dlen] && dlen < size)
-		dlen++;
-	i = 0;
-	while (src[i] && dlen + i + 1 < size)
+	dl = 0;
+	sl = ft_strlen(src);
+	while (dl < size && dst[dl])
 	{
-		dst[dlen + i] = src[i];
+		dl++;
+	}
+	if (dl == size)
+	{
+		return (size + sl);
+	}
+	i = 0;
+	while (src[i] && (dl + i + 1) < (size))
+	{
+		dst[dl + i] = src[i];
 		i++;
 	}
-	if (dlen < size)
-		dst[dlen + i] = '\0';
-	return (dlen + ft_strlen(src));
+	dst[dl + i] = '\0';
+	return (dl + sl);
 }
+
 /*
 #include <stdio.h>
 
@@ -39,7 +47,5 @@ int	main(void)
 	const char *src = "World!";
 
 	size_t result = ft_strlcat(dst, src, 0);
-	printf("Result: %zu\n", result);
-	printf("Concatenated string: %s\n", dst);
-	return (0);
+	printf("Result: %zu\n", result);s
 }*/

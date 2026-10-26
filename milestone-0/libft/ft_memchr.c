@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/11 19:39:49 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/24 14:35:44 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 16:44:58 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,12 @@ void	*ft_memchr(const void *s, int c, size_t n)
 
 int	main(void)
 {
-	const char	*str;
+	const char	*str = "hello 42";
 	char		*found;
 
-	str = "hello 42";
-	found = (char *)ft_memchr(str, 'h', strlen(str));
+	found = (char *)ft_memchr(str, '4', strlen(str));
 	if (found)
-		printf("found at index : %ld\n", found - str);
+		printf("found '4' at index %td\n", found - str);   //pointer diff = inde
 	else
 		printf("not found\n");
-	return (0);
 }*/

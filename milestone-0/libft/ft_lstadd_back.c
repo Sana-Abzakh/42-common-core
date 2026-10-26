@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/19 16:28:22 by sana              #+#    #+#             */
-/*   Updated: 2026/10/19 16:31:12 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 13:29:12 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,5 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	if (!last)
 		*lst = new;
 	else
-		last->next = *lst;
+		last->next = new;
 }

@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 19:09:08 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/24 18:24:51 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 13:08:58 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	i = 0;
-	str = malloc(ft_strlen(s)) + 1);
+	str = malloc(ft_strlen(s) + 1);
 	if (str == NULL)
 		return (NULL);
 	while (s[i] != '\0')

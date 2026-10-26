@@ -6,16 +6,16 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 12:59:34 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/19 14:03:42 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 15:41:53 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
+
 
 /* Part 1 */
 int		ft_isalpha(int c);

@@ -6,7 +6,7 @@
 /*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 21:11:39 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/23 15:58:01 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 13:13:15 by sana             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isdigit(int c)
 		return (c);
 	return (0);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
@@ -30,4 +30,4 @@ int	main(void)
 	printf("testing %d : %d \n", test2, ft_isdigit(test2));
 	printf("testing %c : %d \n", test4, ft_isdigit(test4));
 	return (0);
-}
+}*/
