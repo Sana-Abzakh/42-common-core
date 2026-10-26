@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 21:57:31 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/21 15:15:51 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 23:21:05 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,12 @@ char	*ft_strjoin(const char *s1, const char *s2)
 	new_str = (char *)malloc(len1 + len2 + 1);
 	if (!new_str)
 		return (NULL);
-	ft_strlcpy(new_str, s1, len1 + 1);
-	ft_strlcat(new_str, s2, len1 + len2 + 1);
+	ft_memcpy(new_str, s1, len1 + 1);
+	ft_memcpy(new_str + len1, s2, len2 + 1);
 	return (new_str);
 }
-/*
-#include <stdio.h>
+
+/*#include <stdio.h>
 
 int	main(void)
 {
@@ -38,7 +38,7 @@ int	main(void)
 	char	*s2;
 	char	*result;
 
-	s1 = "42 amman, ";
+	s1 = "42 amman,";
 	s2 = "welcome";
 	result = ft_strjoin(s1, s2);
 	if (result)
@@ -47,5 +47,4 @@ int	main(void)
 		free(result);
 	}
 	return (0);
-}
-*/
+}*/

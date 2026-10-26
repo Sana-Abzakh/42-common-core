@@ -3,32 +3,36 @@
 /*                                                        :::      ::::::::   */
 /*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 18:21:54 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/21 15:57:35 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 23:21:55 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;
+	size_t	ssize;
 
 	if (!s)
 		return (NULL);
-	if (start >= ft_strlen(s))
-		return (ft_strdup(""));
-	if (len > ft_strlen(s + start))
-		len = ft_strlen(s + start);
-	sub = (char *)malloc(sizeof(char) * (len + 1));
+	ssize = ft_strlen(s);
+	if (start >= ssize)
+		len = 0;
+	else if (len > ssize - start)
+		len = ssize - start;
+	sub = (char *)malloc(len + 1);
 	if (!sub)
 		return (NULL);
-	ft_strlcpy(sub, s + start, len + 1);
+	ft_memcpy(sub, s + start, len);
+	sub[len] = '\0';
 	return (sub);
 }
-/*
-#include <stdio.h>
+
+/*#include <stdio.h>
 
 int	main(void)
 {
@@ -51,6 +55,5 @@ int	main(void)
 	free(result2);
 	free(result3);
 	free(result4);
-
-	return (0);
+	
 }*/

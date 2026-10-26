@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/12 13:04:33 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/21 15:38:15 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 23:21:38 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,31 +20,28 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	if (little[0] == '\0')
 		return ((char *)big);
 	i = 0;
-	while (i < len && big[i])
+	while (big[i] && i < len)
 	{
 		j = 0;
-		while (big[i + j] == little[j] && (i + j) < len)
-		{
-			if (little[j + 1] == '\0')
-				return ((char *)big + i);
+		while ((i + j) < len && little[j] && big[i + j] == little[j])
 			j++;
-		}
+		if (little[j] == '\0')
+			return ((char *)&big[i]);
 		i++;
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
+
+/*#include <stdio.h>
 
 int	main(void)
 {
-	char	*str1;
-	char	*str2;
-	size_t	len;
-
-	str1 = "Sana Aiman Abzakh";
-	str2 = "Aiman";
-	len = 15;
-	printf("result: %s\n", ft_strnstr(str1, str2, len));
+	//null in pionter format is nill
+	printf("%s\n", ft_strnstr("hello", "ll", 5));  
+	printf("%p\n", ft_strnstr("hello", "ll", 3)); 
+	printf("%p\n", ft_strnstr("hello", "llo", 4)); 
+	printf("%s\n", ft_strnstr("hello", "llo", 5)); 
+	printf("%s\n", ft_strnstr("hello", "", 0));    
+	printf("%p\n", ft_strnstr("hello", "z", 5));   
 	return (0);
 }*/

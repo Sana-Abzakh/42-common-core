@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/05 17:33:39 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/24 14:14:22 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 23:21:43 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,31 +14,27 @@
 
 char	*ft_strrchr(const char *s, int c)
 {
-	char	cc;
-	size_t	len;
+	int	i;
 
-	cc = (char)c;
-	len = ft_strlen(s) + 1;
-	while (len > 0)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		len--;
-		if (s[len] == cc)
-			return ((char *)&s[len]);
+		if (s[i] == (char)c)
+			return ((char *)&s[i]);
+		i--;
 	}
 	return (NULL);
 }
-/*
-#include <stdio.h>
+
+/*#include <stdio.h>
 
 int	main(void)
 {
-	const char *str = "";
-	char *res;
+	char	*s;
 
-	res = ft_strrchr(str, 'a');
-	if (res == NULL)
-		printf("Not found\n");
-	else
-		printf("Found at index: %td\n", res - str);
-	return (0);
+	s = "hello world!";
+	printf("%s\n", ft_strrchr(s, 'l'));
+	printf("%s\n", ft_strrchr(s, '\0'));
+	printf("%s\n", ft_strrchr(s, 'h'));
+	printf("%p\n", ft_strrchr(s, 'H'));
 }*/

@@ -3,34 +3,29 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sana <sana@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/16 20:18:57 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/25 18:58:41 by sana             ###   ########.fr       */
+/*   Updated: 2026/10/26 23:20:53 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *src)
+char	*ft_strdup(const char *s)
 {
-	char	*new_s;
-	size_t	i;
+	size_t	ssize;
+	char	*str;
 
-	i = 0;
-	new_s = malloc(ft_strlen(src) + 1);
-	if (!new_s)
+	ssize = ft_strlen(s) + 1;
+	str = malloc(ssize);
+	if (str == NULL)
 		return (NULL);
-	while (src[i])
-	{
-		new_s[i] = src[i];
-		i++;
-	}
-	new_s[i] = '\0';
-	return (new_s);
+	ft_memcpy(str, s, ssize);
+	return (str);
 }
-/*
-#include <stdio.h>
+
+/*#include <stdio.h>
 
 int	main(void)
 {
@@ -42,5 +37,4 @@ int	main(void)
 	printf("Original string: %s\n", test_str);
 	printf("Duplicated string: %s\n", result);
 	free(result);
-	return (0);
 }*/
