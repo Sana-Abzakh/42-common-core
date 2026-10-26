@@ -6,80 +6,82 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 18:09:02 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:20:41 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/26 23:29:41 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	ft_count_words(char const *s, char c)
+static size_t	ft_count_words(const char *s, char c)
 {
+	size_t	i;
 	size_t	count;
 
+	i = 0;
 	count = 0;
-	while (*s)
+	while (s[i] != '\0')
 	{
-		while (*s == c)
-			s++;
-		if (*s)
+		if (s[i] != c && (s[i + 1] == c || s[i + 1] == '\0'))
 			count++;
-		while (*s != c && *s)
-			s++;
+		i++;
 	}
 	return (count);
 }
 
-static void	ft_free_all(char **arr, size_t n)
+static char	**ft_free(char **ssplit, size_t j)
 {
-	while (n > 0)
-	{
-		n--;
-		free(arr[n]);
-	}
-	free(arr);
+	while (j > 0)
+		free(ssplit[--j]);
+	free(ssplit);
+	return (NULL);
 }
 
-static int	ft_fill(char **result, const char *s, char c)
+static size_t	ft_word_length(const char *s, char c, size_t i)
+{
+	size_t	len;
+
+	len = 0;
+	while (s[i + len] != '\0' && s[i + len] != c)
+		len++;
+	return (len);
+}
+
+static char	**ft_fill(char **ssplit, const char *s, char c)
 {
 	size_t	i;
 	size_t	j;
-	size_t	start;
+	size_t	length;
 
 	i = 0;
 	j = 0;
-	while (s[i])
+	while (s[i] != '\0')
 	{
-		while (s[i] && s[i] == c)
-			i++;
-		start = i;
-		while (s[i] && s[i] != c)
-			i++;
-		if (i > start)
+		if (s[i] != c)
 		{
-			result[j] = ft_substr(s, start, i - start);
-			if (!result[j++])
-			{
-				ft_free_all(result, j - 1);
-				return (0);
-			}
+			length = ft_word_length(s, c, i);
+			ssplit[j] = ft_substr(s, i, length);
+			if (!ssplit[j])
+				return (ft_free(ssplit, j));
+			j++;
+			i += length;
 		}
+		else
+			i++;
 	}
-	result[j] = NULL;
-	return (1);
+	ssplit[j] = 0;
+	return (ssplit);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**result;
+	char	**ssplit;
 
 	if (!s)
 		return (NULL);
-	result = malloc((ft_count_words(s, c) + 1) * sizeof(char *));
-	if (!result)
+	ssplit = (char **)malloc((ft_count_words(s, c) + 1) * sizeof(char *));
+	if (!ssplit)
 		return (NULL);
-	if (!ft_fill(result, s, c))
-		return (NULL);
-	return (result);
+	return (ft_fill(ssplit, s, c));
 }
 
 /*

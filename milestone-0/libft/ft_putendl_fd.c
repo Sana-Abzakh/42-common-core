@@ -6,32 +6,29 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 16:26:16 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:20:24 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/26 23:36:37 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
 
 void	ft_putendl_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (s[i])
+	if (!s)
+		return ;
+	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
 		i++;
 	}
 	write(fd, "\n", 1);
 }
+
 /*
 int	main(void)
 {
-	int fd;
-
-	fd = open("test.txt", O_RDWR);
-
-	ft_putendl_fd("hello world !", fd);
-	close(fd);
+         ft_putendl_fd("hello", 1);
 }*/

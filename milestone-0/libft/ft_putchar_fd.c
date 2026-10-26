@@ -6,12 +6,11 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 13:43:27 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:20:19 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/26 23:35:41 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
 
 void	ft_putchar_fd(char c, int fd)
 {
@@ -20,9 +19,6 @@ void	ft_putchar_fd(char c, int fd)
 /*
 int	main(void)
 {
-	int	fd;
-
-	fd = open("test.txt", O_RDWR);
-	ft_putchar_fd('c', fd);
-	close(fd);
-}*/
+        ft_putchar_fd('s', 1);
+}
+*/

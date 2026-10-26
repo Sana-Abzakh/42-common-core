@@ -6,19 +6,20 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 16:16:23 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:20:36 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/26 23:36:09 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (s[i])
+	if (!s)
+		return ;
+	while (s[i] != '\0')
 	{
 		write(fd, &s[i], 1);
 		i++;
@@ -27,10 +28,5 @@ void	ft_putstr_fd(char *s, int fd)
 /*
 int	main(void)
 {
-	int	fd;
-
-	fd = open("test.txt", O_RDWR);
-	ft_putstr_fd("Hello 42!", fd);
-	close(fd);
-}
-*/
+         ft_putstr_fd("hello", 1);
+}*/

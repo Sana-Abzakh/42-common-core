@@ -6,37 +6,31 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/18 16:47:47 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:20:30 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/26 23:35:30 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <fcntl.h>
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	long	num;
 	char	c;
-	long	x;
 
-	x = n;
-	if (x < 0)
+	num = n;
+	if (num < 0)
 	{
 		write(fd, "-", 1);
-		x = -x;
+		num *= -1;
 	}
-	if (x >= 10)
-	{
-		ft_putnbr_fd((x / 10), fd);
-	}
-	c = (x % 10) + '0';
+	if (num >= 10)
+		ft_putnbr_fd(num / 10, fd);
+	c = (num % 10) + '0';
 	write(fd, &c, 1);
 }
+
 /*
 int	main(void)
 {
-	int fd;
-
-	fd = open("test.txt", O_RDWR);
-	ft_putnbr_fd(-2147483648, fd);
-	close(fd);
+         ft_putnbr_fd(-1112, 1);
 }*/

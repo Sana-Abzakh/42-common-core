@@ -6,58 +6,53 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/17 18:06:36 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:15:05 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/26 23:30:47 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_count_digits(int n)
+static size_t	ft_count(int n)
 {
 	size_t	count;
 
 	count = 0;
-	if (n == 0)
-		count = 1;
-	else
+	if (n <= 0)
+		count++;
+	while (n != 0)
 	{
-		if (n < 0)
-			count++;
-		while (n)
-		{
-			n /= 10;
-			count++;
-		}
+		n = n / 10;
+		count++;
 	}
 	return (count);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	size_t	len;
 	long	num;
+	char	*s;
+	size_t	i;
 
+	i = ft_count(n);
 	num = n;
-	len = ft_count_digits(n);
-	str = malloc(len + 1);
-	if (!str)
+	s = malloc(i + 1);
+	if (!s)
 		return (NULL);
-	str[len] = '\0';
-	if (num == 0)
-		str[0] = '0';
+	s[i] = '\0';
 	if (num < 0)
 	{
-		str[0] = '-';
-		num = -num;
+		s[0] = '-';
+		num *= -1;
 	}
-	while (num > 0)
+	if (num == 0)
+		s[0] = '0';
+	while (num != 0)
 	{
-		len--;
-		str[len] = (num % 10) + '0';
+		--i;
+		s[i] = (num % 10) + '0';
 		num /= 10;
 	}
-	return (str);
+	return (s);
 }
 /*
 #include <stdio.h>

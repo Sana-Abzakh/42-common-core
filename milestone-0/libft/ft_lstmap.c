@@ -6,7 +6,7 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 23:19:06 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:19:07 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/26 23:44:35 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,25 +14,25 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*new_list;
-	t_list	*new_node;
-	void	*new_content;
+	t_list	*newlst;
+	t_list	*newnode;
+	void	*newcontent;
 
 	if (!lst || !f || !del)
 		return (NULL);
-	new_list = NULL;
+	newlst = NULL;
 	while (lst)
 	{
-		new_content = f(lst->content);     // 1. transform
-		new_node = ft_lstnew(new_content); // 2. wrap in a node
-		if (!new_node)                     // 3. handle failure
+		newcontent = f(lst->content);
+		newnode = ft_lstnew(newcontent);
+		if (!newnode)
 		{
-			del(new_content);            // free the payload we just made
-			ft_lstclear(&new_list, del); // free everything built so far
+			del(newcontent);
+			ft_lstclear(&newlst, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&new_list, new_node); // 4. append
-		lst = lst->next;                     // 5. advance original
+		ft_lstadd_back(&newlst, newnode);
+		lst = lst->next;
 	}
-	return (new_list);
+	return (newlst);
 }

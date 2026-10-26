@@ -6,7 +6,7 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 23:18:58 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:18:59 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/26 23:45:07 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,8 @@ t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);
-	while (lst->next)
-	{
+	while (lst->next != NULL)
 		lst = lst->next;
-	}
 	return (lst);
 }
 /*

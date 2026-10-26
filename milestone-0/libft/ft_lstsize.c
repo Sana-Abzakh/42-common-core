@@ -6,7 +6,7 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 23:19:21 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:19:22 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/26 23:44:00 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 unsigned int	ft_lstsize(t_list *lst)
 {
-	int count;
+	unsigned int	count;
 
 	count = 0;
-	while (lst)
+	while (lst != NULL)
 	{
-		lst = lst->next;
 		count++;
+		lst = lst->next;
 	}
 	return (count);
 }
