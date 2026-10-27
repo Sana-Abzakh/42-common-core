@@ -6,7 +6,7 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 23:18:58 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:45:07 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/27 12:25:45 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,28 +20,22 @@ t_list	*ft_lstlast(t_list *lst)
 		lst = lst->next;
 	return (lst);
 }
-/*
-#include <stdio.h>
+
+/*#include <stdio.h>
 
 int	main(void)
 {
-	t_list *list;
-	t_list *last_node;
-	int value1 = 1;
-	int value2 = 2;
-	int value3 = 3;
+	t_list	*n1;
+	t_list	*n2;
+	t_list	*n3;
 
-	list = ft_lstnew(&value1);
-	list->next = ft_lstnew(&value2);
-	list->next->next = ft_lstnew(&value3);
-
-	last_node = ft_lstlast(list);
-	printf("Last node content: %d\n", *(int *)(last_node->content));
-
-	// Free the allocated memory
-	free(list->next->next);
-	free(list->next);
-	free(list);
-
-	return (0);
+	n1 = ft_lstnew("42");
+	n2 = ft_lstnew("43");
+	n3 = ft_lstnew("44");
+	ft_lstadd_back(&n1, n2);
+	ft_lstadd_front(&n3, n2);
+	printf("Last node content: %s\n", (char *)ft_lstlast(n1->content));
+	free(n2->next);
+	free(n1->next);
+	free(n3);
 }*/

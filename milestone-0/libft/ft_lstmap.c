@@ -6,7 +6,7 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 23:19:06 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:44:35 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/27 10:36:18 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,23 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	}
 	return (newlst);
 }
+/*
+void	del(void *content)
+{
+	free(content);
+}
+void	ft_toupperlst(void *content)
+{
+	char	*str;
+	int		i;
+
+	i = 0;
+	str = (char *) content;
+	while (str[i] != '\0')
+	{
+		if(str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
+	}
+}
+*/

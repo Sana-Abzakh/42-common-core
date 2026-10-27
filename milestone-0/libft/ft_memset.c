@@ -6,7 +6,7 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/06 19:57:15 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/26 23:20:14 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/27 10:54:28 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,15 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned char	*temp;
+	unsigned char	*tmp;
+	size_t			i;
 
-	temp = (unsigned char *)s;
-	while (n > 0)
+	i = 0;
+	tmp = (unsigned char *)s;
+	while (i < n)
 	{
-		*temp = (unsigned char)c;
-		temp++;
-		n--;
+		tmp[i] = (unsigned char)c;
+		i++;
 	}
 	return (s);
 }
@@ -30,7 +31,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 int	main(void)
 {
-	char test_str[] = "hello"; // modifiable array 
+	char test_str[] = "hello"; // modifiable array
 	ft_memset(test_str + 2, 'x', 3);
 	printf("hello becomes: %s\n", test_str);
 }*/
