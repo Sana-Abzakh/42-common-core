@@ -35,9 +35,9 @@ This is my personal collection of Common Core projects, kept in one place so I c
  
 | Project | What it is (in plain words) | Status |
 |---|---|---|
-| [`libft`](./milestone-0/libft) | My own mini library of basic C functions (string handling, memory handling, lists). Everything I build later can reuse it. | Done |
-| [`ft_printf`](./ft_printf) | My own version of `printf`, the function that prints formatted text on screen (for example, inserting numbers and words into a sentence). | Done |
-| [`get_next_line`](./get_next_line) | A function that reads a file one line at a time, no matter how long the file is. | In progress |
+| [`libft`](milestone-0&1/libft) | My own mini library of basic C functions (string handling, memory handling, lists). Everything I build later can reuse it. | Done |
+| [`ft_printf`](milestone-0&1/ft_printf) | My own version of `printf`, the function that prints formatted text on screen (for example, inserting numbers and words into a sentence). | Done |
+| [`get_next_line`]() | A function that reads a file one line at a time, no matter how long the file is. | In progress |
  
 More projects will be added here as I move through the curriculum.
  
