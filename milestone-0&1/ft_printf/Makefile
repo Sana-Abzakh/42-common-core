@@ -3,13 +3,8 @@ NAME      = libftprintf.a
 CC        = cc
 CFLAGS    = -Wall -Wextra -Werror
 
-<<<<<<< HEAD
-SRCS = ft_printf.c ft_print_char.c ft_print_str.c ft_print_nbr.c \
-       ft_print_unsigned.c ft_print_hex.c ft_print_ptr.c
-=======
 
 SRCS      = ft_printf.c ft_print_char.c ft_print_str.c  ft_print_nbr.c ft_print_unsigned.c ft_print_hex.c ft_print_ptr.c
->>>>>>> 9aa508ef251138f7e87c00bbdb0f4f6844da2b82
 
 OBJS      = $(SRCS:.c=.o)
 
