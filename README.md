@@ -95,5 +95,3 @@ I am **Sana Abzakh**, a physics graduate (BSc, JUST) with research experience in
  
 - Official website: https://42.fr
 - 42 Amman: https://42amman.com
- 
-Claude finished the response
