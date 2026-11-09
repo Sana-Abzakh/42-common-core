@@ -3,11 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_ptr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sabzakh <sabzakh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 15:48:34 by sabzakh           #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2026/10/31 19:45:07 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/11/02 14:09:20 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,22 +36,3 @@ int	ft_print_ptr(void *ptr)
 	count += ft_ptr_hex((unsigned long)ptr);
 	return (count);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	int x;
-	int a;
-	int b;
-
-	a = printf("%p", (void *)&x);
-	printf("\n");
-	b = ft_print_ptr(&x);
-	printf("\nreal = %d, mine = %d\n", a, b);
-	a = printf("%p", NULL);
-	printf("\n");
-	b = ft_print_ptr(NULL);
-	printf("\nreal = %d, mine = %d\n", a, b);
-	return (0);
-}*/

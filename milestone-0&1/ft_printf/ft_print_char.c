@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_char.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sabzakh <sabzakh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 15:48:09 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/31 20:14:51 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/11/02 13:20:03 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,6 @@
 
 int	ft_print_char(char c)
 {
-	return (write(1, &c, 1));
+	write(1, &c, 1);
+	return (1);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	int c = ft_print_char('S');
-	printf("\n%d \n", c);
-	return (0);
-}*/
