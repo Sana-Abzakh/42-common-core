@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_str.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sabzakh <sabzakh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 15:48:41 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/31 15:48:42 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/11/02 14:09:45 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,3 @@ int	ft_print_str(char *s)
 		len++;
 	return (write(1, s, len));
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	int s = ft_print_str("hello!");
-	printf("\n %d \n", s);
-	return (0);
-}*/

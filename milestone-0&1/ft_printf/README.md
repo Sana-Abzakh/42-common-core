@@ -1,4 +1,4 @@
-*This project has been created as part of the 42 curriculum by @sabzakh.*
+*This project has been created as part of the 42 curriculum by sabzakh.*
 
 # ft_printf
 
@@ -27,7 +27,7 @@ It writes to standard output and returns the number of characters printed, like 
 | `%X` | an unsigned hexadecimal number, uppercase |
 | `%%` | a literal percent sign |
 
-Only the mandatory part is implemented. The project does not use Libft.
+***Only the mandatory part is implemented. The project does not use Libft.***
 
 ### Algorithm and data structures
 
@@ -38,7 +38,7 @@ Only the mandatory part is implemented. The project does not use Libft.
 3. Every print function returns the number of characters it wrote, and `ft_printf` adds these up into the final return value.
 
 
-**Number printing.** Numbers are printed recursively. Digits come out of a number from the right (`n % base`), but must be printed from the left, so each call first prints the number without its last digit (`n / base`), and then prints its own digit. This reverses the order without needing a buffer or any dynamic allocation.
+**Number printing.** Numbers are printed recursively. Digits come out of a number from the right (`n % base`), but must be printed from the left, so each call first prints the number without its last digit (`n / base`), and then prints its own digit.
 
 - `%d` / `%i`: the value is copied into a `long` before the sign is handled, so that `INT_MIN` can be negated safely.
 - `%u`: the same recursion, with base 10 and an `unsigned int`.
@@ -47,7 +47,7 @@ Only the mandatory part is implemented. The project does not use Libft.
 
 **Data structures.**  The project allocates no memory. The two pieces of data used are:
 
-- `va_list`, which tracks the current position in the variable argument list. It is passed to the dispatcher as a pointer (`va_list *`), so that every `va_arg` call advances the one real list, as the C standard requires.
+- `va_list`, which tracks the current position in the variable argument list. It is passed to the dispatcher as a pointer (`va_list *`), so that every `va_arg` call advances the one real list.
 - A constant lookup string (`"0123456789abcdef"` or `"0123456789ABCDEF"`), indexed by `n % base`. This converts a digit value to its character and avoids special-casing the letters `a` to `f`. The string is chosen by the conversion letter, so `%x` and `%X` share one function.
 
 ### Project structure
@@ -57,7 +57,7 @@ Only the mandatory part is implemented. The project does not use Libft.
 ├── Makefile
 ├── ft_printf.h
 ├── ft_printf.c          
-├── ft_print_c.c          
+├── ft_print_char.c          
 ├── ft_print_str.c        
 ├── ft_print_nbr.c        
 ├── ft_print_unsigned.c   
@@ -116,10 +116,6 @@ To check the output, the same format string can be passed to both `printf` and `
 
 AI (Claude) was used for the following tasks:
 
-- Reviewing edge cases for the conversion specifiers (`%c`, `%s`, `%p`, `%d`,
-  `%i`, `%u`, `%x`, `%X`, `%%`), including NULL string/pointer handling,
-  `INT_MIN`/`LONG_MIN`/`UINT_MAX` boundaries, and empty-string output.
-- Checking `ft_printf.h` for Norm compliance (42 header block, tab alignment
-  of prototypes, spacing around pointers, no forbidden includes).
+- Checking `ft_printf.h` for Norm compliance.
 - Drafting and proofreading this README.
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: sabzakh <sabzakh@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 15:48:18 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/31 16:14:23 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/11/02 14:09:27 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,23 +27,3 @@ int	ft_print_hex(unsigned int n, char format)
 	count += write(1, &digits[n % 16], 1);
 	return (count);
 }
-/*#include <stdio.h>
-
-int	main(void)
-{
-	int	n;
-
-	n = ft_print_hex(0, 'x');
-	printf("\n %d\n", n);
-	n = ft_print_hex(255, 'x');
-	printf("\n %d \n", n);
-	n = ft_print_hex(255, 'X');
-	printf("\n %d \n", n);
-	n = ft_print_hex(4096, 'x');
-	printf("\n %d\n", n);
-	n = ft_print_hex(3735928559u, 'x');
-	printf("\n  %d \n", n);
-	n = ft_print_hex(4294967295u, 'X');
-	printf("\n %d\n", n);
-	return (0);
-}*/
