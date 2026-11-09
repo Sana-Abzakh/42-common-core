@@ -6,7 +6,7 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 15:48:18 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/31 16:14:23 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/31 20:04:17 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	ft_print_hex(unsigned int n, char format)
 {
-	char	*digits;
-	int		count;
+	const char	*digits;
+	int			count;
 
 	if (format == 'X')
 		digits = "0123456789ABCDEF";

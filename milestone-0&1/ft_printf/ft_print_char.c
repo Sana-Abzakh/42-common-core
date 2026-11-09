@@ -6,13 +6,13 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 15:48:09 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/31 15:48:11 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/31 20:14:51 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_print_c(char c)
+int	ft_print_char(char c)
 {
 	return (write(1, &c, 1));
 }
@@ -21,7 +21,7 @@ int	ft_print_c(char c)
 
 int	main(void)
 {
-	int c = ft_print_c('S');
+	int c = ft_print_char('S');
 	printf("\n%d \n", c);
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 15:48:59 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/31 19:22:23 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/10/31 19:57:45 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static int	handle_spec(char c, va_list *ap)
 {
 	if (c == 'c')
-		return (ft_print_c(va_arg(*ap, int)));
+		return (ft_print_char(va_arg(*ap, int)));
 	if (c == 's')
 		return (ft_print_str(va_arg(*ap, char *)));
 	if (c == 'p')
@@ -27,8 +27,8 @@ static int	handle_spec(char c, va_list *ap)
 	if (c == 'x' || c == 'X')
 		return (ft_print_hex(va_arg(*ap, unsigned int), c));
 	if (c == '%')
-		return (ft_print_c('%'));
-	return (0);
+		return (ft_print_char('%'));
+	return (-1);
 }
 
 int	ft_printf(const char *format, ...)
@@ -36,7 +36,10 @@ int	ft_printf(const char *format, ...)
 	va_list	ap;
 	int		count;
 	int		i;
+	int		tmp;
 
+	if (!format)
+		return (-1);
 	va_start(ap, format);
 	count = 0;
 	i = 0;
@@ -45,16 +48,28 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%' && format[i + 1])
 		{
 			i++;
-			count += handle_spec(format[i], &ap);
+			tmp = handle_spec(format[i], &ap);
+			if (tmp < 0)
+			{
+				if (write(1, "%", 1) < 0)
+					return (-1);
+				count++;
+				if (write(1, &format[i], 1) < 0)
+					return (-1);
+				count++;
+			}
+			else
+				count += tmp;
 		}
+		else if (write(1, &format[i], 1) < 0)
+			return (-1);
 		else
-			count += write(1, &format[i], 1);
+			count++;
 		i++;
 	}
 	va_end(ap);
 	return (count);
 }
-
 /*#include <stdio.h>
 
 int	main(void)
