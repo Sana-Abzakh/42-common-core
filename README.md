@@ -1,12 +1,3 @@
-Claude
-
-
-
-
-
-
-
-Readme · MD
 # 42 Common Core
  
 My projects from the **Common Core** at **42 Amman**, a programming school where you learn by building things, not by watching lectures.
