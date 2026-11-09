@@ -41,7 +41,6 @@ This is my personal collection of Common Core projects, kept in one place so I c
  
 More projects will be added here as I move through the curriculum.
  
-> The folder paths above are an example. Adjust them to match how your repo is actually organized.
  
 ---
  
