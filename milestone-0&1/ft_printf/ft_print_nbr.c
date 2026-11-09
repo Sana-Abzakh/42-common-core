@@ -6,7 +6,7 @@
 /*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/31 15:48:25 by sabzakh           #+#    #+#             */
-/*   Updated: 2026/10/31 15:48:26 by sabzakh          ###   ########.fr       */
+/*   Updated: 2026/11/09 13:05:39 by sabzakh          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,12 +31,3 @@ int	ft_print_nbr(int n)
 	count += write(1, &c, 1);
 	return (count);
 }
-
-/*#include <stdio.h>
-
-int	main(void)
-{
-	int s = ft_print_nbr(-2147483648);
-	printf("\n %d \n", s);
-	return (0);
-}*/
