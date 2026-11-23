@@ -1,0 +1,58 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: sabzakh <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/26 23:19:06 by sabzakh           #+#    #+#             */
+/*   Updated: 2026/10/27 10:36:18 by sabzakh          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+{
+	t_list	*newlst;
+	t_list	*newnode;
+	void	*newcontent;
+
+	if (!lst || !f || !del)
+		return (NULL);
+	newlst = NULL;
+	while (lst)
+	{
+		newcontent = f(lst->content);
+		newnode = ft_lstnew(newcontent);
+		if (!newnode)
+		{
+			del(newcontent);
+			ft_lstclear(&newlst, del);
+			return (NULL);
+		}
+		ft_lstadd_back(&newlst, newnode);
+		lst = lst->next;
+	}
+	return (newlst);
+}
+/*
+void	del(void *content)
+{
+	free(content);
+}
+void	ft_toupperlst(void *content)
+{
+	char	*str;
+	int		i;
+
+	i = 0;
+	str = (char *) content;
+	while (str[i] != '\0')
+	{
+		if(str[i] >= 'a' && str[i] <= 'z')
+			str[i] -= 32;
+		i++;
+	}
+}
+*/
